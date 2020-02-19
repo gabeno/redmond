@@ -1,4 +1,7 @@
-from examples.balanced_strings import balanced_parens_checker, generalized_balanced_checker
+from examples.balanced_strings import (
+    balanced_parens_checker,
+    generalized_balanced_checker,
+)
 
 
 class TestStackExamplesBalancedParens(object):

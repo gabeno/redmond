@@ -1,5 +1,6 @@
 from examples.base_converter import divide_by_2, base_converter
 
+
 class TestDivideBy2(object):
     def test__int_0__returns_0(self):
         assert divide_by_2(0) == "0"
