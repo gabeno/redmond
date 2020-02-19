@@ -24,6 +24,9 @@ def divide_by_2(num: int) -> str:
 
 
 def base_converter(num: int, base: int) -> str:
+    """
+    Ref: http://calc.50x.eu/
+    """
     stack = Stack()
     converted_str: str = ""
     digits = "0123456789ABCDEF"
