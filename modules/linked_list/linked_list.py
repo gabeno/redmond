@@ -20,3 +20,7 @@ class LinkedList:
     """
     def __init__(self, node):
         self.head_node = node
+
+    def get_head(self):
+        """returns the head of the list"""
+        return self.head_node

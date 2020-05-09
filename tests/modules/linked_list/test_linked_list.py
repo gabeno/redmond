@@ -11,3 +11,8 @@ class TestLinkedList:
 
         alist = LinkedList(first_node)
         assert alist.head_node == first_node
+
+    def test__get_head_node__ok(self):
+        node = Node("a")
+        alist = LinkedList(node)
+        assert alist.get_head() == node
