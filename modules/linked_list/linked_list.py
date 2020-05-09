@@ -24,3 +24,7 @@ class LinkedList:
     def get_head(self):
         """returns the head of the list"""
         return self.head_node
+
+    def is_empty(self):
+        """returns true if the linked list is empty"""
+        return self.head_node is None
