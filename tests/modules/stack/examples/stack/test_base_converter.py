@@ -1,4 +1,4 @@
-from examples.base_converter import divide_by_2, base_converter
+from modules.stack.examples.base_converter import divide_by_2, base_converter
 
 
 class TestDivideBy2(object):

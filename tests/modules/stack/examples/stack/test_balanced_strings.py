@@ -1,10 +1,10 @@
-from examples.balanced_strings import (
+from modules.stack.examples.balanced_strings import (
     balanced_parens_checker,
     generalized_balanced_checker,
 )
 
 
-class TestStackExamplesBalancedParens(object):
+class TestBalancedParensChecker(object):
     def test__empty_string__true(self):
         assert balanced_parens_checker("") == True
 
@@ -26,7 +26,7 @@ class TestStackExamplesBalancedParens(object):
         assert balanced_parens_checker("((") == False
 
 
-class TestStackExamplesiGeneralizedBalancedChecker(object):
+class TestGeneralizedBalancedChecker(object):
     def test__empty_string__true(self):
         assert generalized_balanced_checker("") == True
 
