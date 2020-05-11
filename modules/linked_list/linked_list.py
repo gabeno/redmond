@@ -28,3 +28,22 @@ class LinkedList:
     def is_empty(self):
         """returns true if the linked list is empty"""
         return self.head_node is None
+    def __repr__(self):
+        """Helper method for visually seeing our linked list"""
+        if (self.is_empty()):
+            return f"{self.__class__.__name__} is empty"
+
+        temp = self.head_node
+        s = ""
+        while temp.next_element is not None:
+            s += f"{temp.data} -> "
+            temp = temp.next_element
+        s += f"{temp.data} -> None"
+        return s
+
+if __name__ == "__main__":
+    l = LinkedList(None)
+    print(l)
+
+    l = LinkedList(Node("1"))
+    print(l)
