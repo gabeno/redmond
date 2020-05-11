@@ -28,6 +28,14 @@ class LinkedList:
     def is_empty(self):
         """returns true if the linked list is empty"""
         return self.head_node is None
+
+    def insert_at_head(self, data):
+        """inserts an element at the start/head of the linked list"""
+        temp_node = Node(data)
+        temp_node.next_element = self.head_node
+        self.head_node = temp_node
+        return self.head_node # new list
+
     def __repr__(self):
         """Helper method for visually seeing our linked list"""
         if (self.is_empty()):
