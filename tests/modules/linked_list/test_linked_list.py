@@ -43,3 +43,26 @@ class TestLinkedList:
         assert alist.is_empty() is False
         assert alist.get_head().data == data
         assert str(alist) == f"{data} -> 1 -> None"
+
+    def test_list_empty__insert_at_tail__ok(self):
+        alist = LinkedList()
+        assert alist.is_empty() is True
+        assert alist.get_head() is None
+        data = 1
+        alist.insert_at_tail(data)
+        assert alist.is_empty() is False
+        assert alist.get_head().data == data
+        assert str(alist) == f"{data} -> None"
+
+    def test_list_not_empty__insert_at_tail__ok(self):
+        alist = LinkedList(Node("1"))
+        assert alist.is_empty() is False
+        assert alist.get_head() is not None
+        data = 2
+        alist.insert_at_tail(data)
+        assert alist.is_empty() is False
+        assert str(alist) == f"1 -> {data} -> None"
+        data = 3
+        alist.insert_at_tail(data)
+        assert alist.is_empty() is False
+        assert str(alist) == f"1 -> 2 -> {data} -> None"

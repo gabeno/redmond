@@ -36,6 +36,22 @@ class LinkedList:
         self.head_node = temp_node
         return self.head_node # new list
 
+    def insert_at_tail(self, data):
+        """inserts an element at the end of the linked list"""
+        if self.is_empty():
+            return self.insert_at_head(data)
+
+        # walk to the end of the list
+        current_node = self.head_node
+        while current_node.next_element is not None:
+            current_node = current_node.next_element
+
+        # once loop is done, we are deifinitely at the end of the list
+        # so we insert new node and return list
+        temp_node = Node(data)
+        current_node.next_element = temp_node
+        return self.head_node
+
     def __repr__(self):
         """Helper method for visually seeing our linked list"""
         if (self.is_empty()):
