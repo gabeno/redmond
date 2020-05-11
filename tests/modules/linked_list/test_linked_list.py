@@ -18,7 +18,7 @@ class TestLinkedList:
         assert alist.get_head() == node
 
     def test__is_empty__ok(self):
-        alist = LinkedList(None)
+        alist = LinkedList()
         node = Node("a")
         blist = LinkedList(node)
         assert alist.is_empty() is True
