@@ -52,6 +52,49 @@ class LinkedList:
         current_node.next_element = temp_node
         return self.head_node
 
+    def insert_at_position(self, data, position):
+        """inserts an element at a specified position in the list
+
+        Assumption is that position is zero-based
+        so position zero means head
+        """
+        if position < 0:
+            raise Exception("Negative position not supported")
+
+        # position at the head
+        if self.is_empty() or position == 0:
+            return self.insert_at_head(data)
+
+        # position within range
+        prev_node, current_node = None, self.get_head()
+        current_position = 0
+        while current_node.next_element is not None:
+            if current_position == position:
+                temp_node = Node(data)
+                prev_node.next_element = temp_node
+                temp_node.next_element = current_node
+            prev_node, current_node = current_node, current_node.next_element
+            current_position += 1
+
+        # position at the tail
+        if current_position == position:
+            return self.insert_at_tail(data)
+
+        # position out of range
+        if current_position < position:
+            raise Exception(f"position {position} is out of range!")
+
+    def delete(self, data):
+        """deletes an element with your specified value from the linked list"""
+        pass
+
+    def delete_at_head(self):
+        """deletes the first element of the list"""
+        pass
+
+    def search(self, data):
+        """searches for an element with the specified value in the linked list"""
+
     def __repr__(self):
         """Helper method for visually seeing our linked list"""
         if (self.is_empty()):
